@@ -880,4 +880,4 @@ NUGET
       System.Xml.ReaderWriter (>= 4.3) - restriction: || (>= dnxcore50) (&& (< monoandroid) (< monotouch) (< net45) (>= netstandard1.3) (< win8) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (&& (< monoandroid) (< net45) (>= netstandard1.0) (< netstandard1.3) (< win8) (< wp8) (< wpa81))
 GITHUB
   remote: ZeekoZhu/my-fake-tools
-    my-fake-tools.fsx (fc74569f2f88a936619143976a2da682da94fe82)
+    my-fake-tools.fs (eef1a3f5af37b925a61e17a03421406ed4fcb6ca)

@@ -1,5 +1,13 @@
 module Fake.MyFakeTools
 #load ".fake/build.fsx/intellisense.fsx"
+#r "paket:
+storage none
+source https://api.nuget.org/v3/index.json
+nuget CommandLineParser.FSharp
+nuget Fake.Core.Target
+nuget Fake.Tools.Git
+nuget FSharp.Core 4.5.0
+//"
 open Fake.Core
 open Fake.Tools
 open CommandLine
