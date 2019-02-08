@@ -1,7 +1,9 @@
+module Fake.MyFakeTools
 #load ".fake/build.fsx/intellisense.fsx"
 open Fake.Core
 open Fake.Tools
 open CommandLine
+
 
 // ----------------------
 // Utils
