@@ -1,5 +1,6 @@
-== My Fake Tools
+= My Fake Tools
 
-A set of tools to help you write FAKE scripts.
+https://www.myget.org/feed/zeekoget/package/nuget/MyFakeTools[image:https://img.shields.io/myget/zeekoget/v/MyFakeTools.svg?style=popout[MyGet]]
 
-image:https://img.shields.io/myget/zeekoget/v/MyFakeTools.svg?style=popout[MyGet]
+A set of tools help you to write FAKE scripts.
+
