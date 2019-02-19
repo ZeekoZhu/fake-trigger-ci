@@ -1,0 +1,5 @@
+type project
+id MyFakeTools
+version 0.0.6
+authors Zeeko
+licenseUrl http://opensource.org/licenses/MIT

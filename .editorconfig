@@ -1,0 +1,8 @@
+root = true
+
+[*]
+indent_style = space
+
+[*.{fs,fsx}]
+indent_size = 4
+

@@ -1,12 +1,21 @@
+source https://api.nuget.org/v3/index.json
 version 5.193.0
+storage none
+framework: netstandard2.0
+
+nuget FSharp.Core ~> 4.5.0
+nuget CommandLineParser.FSharp ~> 2.4.3
+nuget Fake.Core.Target ~> 5.12.1
+nuget Fake.Tools.Git ~> 5.12.1
 // [ FAKE GROUP ]
 group Build
     storage none
     source https://api.nuget.org/v3/index.json
+    source https://www.myget.org/F/zeekoget/api/v3/index.json
     nuget Fake.DotNet.Cli
     nuget CommandLineParser.FSharp
     nuget Fake.IO.FileSystem
     nuget Fake.Core.Target
     nuget Fake.Tools.Git
-    nuget FSharp.Core 4.5.0
-    github ZeekoZhu/my-fake-tools my-fake-tools.fs
+    nuget FSharp.Core ~> 4.5.0
+    nuget MyFakeTools 0.0.6

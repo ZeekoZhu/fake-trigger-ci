@@ -1,0 +1,4 @@
+Fake.Core.Target
+CommandLineParser.FSharp
+Fake.Tools.Git
+FSharp.Core
