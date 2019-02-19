@@ -34,16 +34,19 @@ module Utils =
     /// Ensure exit code 0
     let runGitCmd command =
         let (success, stdout, stderr) = Git.CommandHelper.runGitCommand "./" command
-        if success then stdout |> List.head
+        if success then stdout |> List.tryHead
         else failwith stderr
 
     /// Get latest git tag
     let getLatestTag () =
         let revListResult =
             runGitCmd "rev-list --tags --max-count=1"
-        let tagName =
-            runGitCmd (sprintf "describe --tags %s" revListResult)
-        tagName
+        match revListResult with
+        | None -> None
+        | Some revListResult ->
+            let tagName =
+                runGitCmd (sprintf "describe --tags %s" revListResult)
+            tagName
 
     /// Parse cli arguments
     let handleCli<'t> (args: seq<string>) (fn: 't -> unit) =
@@ -76,10 +79,16 @@ module TriggerCI =
             if options.IsProd then options.Version
             else options.Version + "-" + Git.Information.getCurrentHash ()
             |> SemVer.parse
-        let latestTag = getLatestTag () |> SemVer.parse
-        Trace.tracefn "Latest version: %s" latestTag.AsString
-        if newTag < latestTag then failwithf "Invalid version: %A < %A" newTag latestTag
-        Trace.tracefn "New version: %s" newTag.AsString
+        
+        let latestTag =
+            getLatestTag ()
+            |> Option.map SemVer.parse
+        match latestTag with
+        | None -> ignore ()
+        | Some latestTag ->
+            Trace.tracefn "Latest version: %s" latestTag.AsString
+            if newTag < latestTag then failwithf "Invalid version: %A < %A" newTag latestTag
+            Trace.tracefn "New version: %s" newTag.AsString
         newTag
 
     let tagCurrent (tag) =
