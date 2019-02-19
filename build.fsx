@@ -8,6 +8,9 @@ open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators
 open Fake.MyFakeTools
 
+
+Target.useTriggerCI ()
+
 Target.create "Empty" ignore
 
-Target.runOrDefault "Empty"
+Target.runOrDefaultWithArguments "Empty"
