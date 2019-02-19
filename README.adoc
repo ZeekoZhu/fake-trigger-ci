@@ -1,0 +1,5 @@
+== My Fake Tools
+
+A set of tools to help you write FAKE scripts.
+
+image:https://img.shields.io/myget/zeekoget/v/MyFakeTools.svg?style=popout[MyGet]
