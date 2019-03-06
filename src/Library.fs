@@ -63,6 +63,8 @@ module Utils =
 // ----------------------
 
 module TriggerCI =
+    open System
+
     open Utils
     type TriggerCIOptions =
         { [<Option('v', "version", Required = true)>] Version: string
@@ -75,9 +77,10 @@ module TriggerCI =
         isEmpty
 
     let validateVersion (options: TriggerCIOptions) =
+        let timestamp = DateTime.UtcNow.ToString("yyyyMMddhhmmss")
         let newTag =
             if options.IsProd then options.Version
-            else options.Version + "-" + Git.Information.getCurrentHash ()
+            else options.Version + "-" + timestamp + "-" + Git.Information.getCurrentHash ()
             |> SemVer.parse
         
         let latestTag =
