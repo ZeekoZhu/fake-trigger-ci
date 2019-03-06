@@ -18,4 +18,4 @@ group Build
     nuget Fake.Core.Target
     nuget Fake.Tools.Git
     nuget FSharp.Core ~> 4.5.0
-    nuget MyFakeTools 0.0.8
+    nuget MyFakeTools 0.0.9
