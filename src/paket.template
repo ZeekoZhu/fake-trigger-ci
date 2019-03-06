@@ -1,6 +1,6 @@
 type project
 id MyFakeTools
-version 0.0.8
+version 0.0.9
 authors Zeeko
 licenseUrl http://opensource.org/licenses/MIT
 dependencies
