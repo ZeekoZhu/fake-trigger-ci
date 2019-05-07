@@ -80,7 +80,7 @@ module TriggerCI =
         let timestamp = DateTime.UtcNow.ToString("yyyyMMddhhmmss")
         let newTag =
             if options.IsProd then options.Version
-            else options.Version + "-" + timestamp + "-" + Git.Information.getCurrentHash ()
+            else options.Version + "-" + timestamp + "." + Git.Information.getCurrentHash ()
             |> SemVer.parse
         
         let latestTag =
