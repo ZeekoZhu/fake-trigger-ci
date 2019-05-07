@@ -4,7 +4,7 @@ storage none
 framework: netstandard20
 
 nuget FSharp.Core ~> 4.6
-nuget CommandLineParser.FSharp ~> 2.4
+nuget CommandLineParser.FSharp ~> 2.5
 nuget Fake.Core.Target ~> 5.12
 nuget Fake.Tools.Git ~> 5.12
 // [ FAKE GROUP ]
@@ -13,9 +13,5 @@ group Build
     source https://api.nuget.org/v3/index.json
     source https://www.myget.org/F/zeekoget/api/v3/index.json
     nuget Fake.DotNet.Cli
-    nuget CommandLineParser.FSharp
-    nuget Fake.IO.FileSystem
-    nuget Fake.Core.Target
-    nuget Fake.Tools.Git
     nuget FSharp.Core ~> 4
     nuget MyFakeTools 0.0.10
