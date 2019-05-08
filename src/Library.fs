@@ -99,7 +99,7 @@ module TriggerCI =
 
     let pushCommits () =
         let runCmd = Git.CommandHelper.runSimpleGitCommand "./"
-        runCmd "push --all" |> ignore
+        runCmd "push" |> ignore
         runCmd "push --tags" |> ignore
 
     let triggerCi (options: TriggerCIOptions) =
