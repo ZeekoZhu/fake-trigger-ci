@@ -97,17 +97,17 @@ module TriggerCI =
     let tagCurrent (tag) =
         Git.Branches.tag "./" tag
 
-    let pushCommits () =
+    let pushCommits tag =
         let runCmd = Git.CommandHelper.runSimpleGitCommand "./"
         runCmd "push" |> ignore
-        runCmd "push --tags" |> ignore
+        runCmd (sprintf "push %s" tag) |> ignore
 
     let triggerCi (options: TriggerCIOptions) =
         Trace.logfn "%A" options
         ensureWorkspaceClean () |> ignore
         let version = validateVersion options
         tagCurrent version.AsString
-        pushCommits ()
+        pushCommits (version.ToString())
         ()
 
     let triggerCiCli (args: seq<string>) =

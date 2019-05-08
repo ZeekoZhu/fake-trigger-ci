@@ -14,4 +14,4 @@ group Build
     source https://www.myget.org/F/zeekoget/api/v3/index.json
     nuget Fake.DotNet.Cli
     nuget FSharp.Core ~> 4
-    nuget MyFakeTools ~> 0.0.11
+    nuget MyFakeTools ~> 0.0.12

@@ -4,3 +4,12 @@ https://www.myget.org/feed/zeekoget/package/nuget/MyFakeTools[image:https://img.
 
 A set of tools help you to write FAKE scripts.
 
+== Notes for owner
+
+. Update `src/paket.template`
+. Push to myget
+. Update `./paket.paket.dependencies`
+. Paket install
+. Stage all changed files
+
+
