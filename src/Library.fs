@@ -100,7 +100,7 @@ module TriggerCI =
     let pushCommits tag =
         let runCmd = Git.CommandHelper.runSimpleGitCommand "./"
         runCmd "push" |> ignore
-        runCmd (sprintf "push %s" tag) |> ignore
+        runCmd (sprintf "push origin %s" tag) |> ignore
 
     let triggerCi (options: TriggerCIOptions) =
         Trace.logfn "%A" options

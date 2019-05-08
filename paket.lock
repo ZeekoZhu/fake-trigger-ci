@@ -1176,7 +1176,7 @@ NUGET
       System.Xml.XmlDocument (>= 4.3) - restriction: || (&& (< monoandroid) (< monotouch) (>= netstandard1.3) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (>= net46)
       System.Xml.XPath (>= 4.3) - restriction: || (&& (< monoandroid) (< monotouch) (>= netstandard1.3) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (>= net46)
   remote: https://www.myget.org/F/zeekoget/api/v3/index.json
-    MyFakeTools (0.0.12)
+    MyFakeTools (0.0.13)
       CommandLineParser.FSharp (>= 2.5 < 3.0) - restriction: >= netstandard2.0
       Fake.Core.Target (>= 5.12 < 6.0) - restriction: >= netstandard2.0
       Fake.Tools.Git (>= 5.12 < 6.0) - restriction: >= netstandard2.0
