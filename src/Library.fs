@@ -77,7 +77,7 @@ module TriggerCI =
         isEmpty
 
     let validateVersion (options: TriggerCIOptions) =
-        let timestamp = DateTime.UtcNow.ToString("yyyyMMddhhmmss")
+        let timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmss")
         let newTag =
             if options.IsProd then options.Version
             else options.Version + "-" + timestamp + "." + Git.Information.getCurrentHash ()
