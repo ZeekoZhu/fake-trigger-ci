@@ -1,4 +1,4 @@
-﻿module Fake.MyFakeTools
+﻿namespace Fake.MyFakeTools
 open Fake.Core
 open Fake.Tools
 open CommandLine

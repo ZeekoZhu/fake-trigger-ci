@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="DockerHelper.fs" />
-    <Compile Include="Library.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="paket.references" />
-    <Content Include="paket.template" />
-  </ItemGroup>
-  <Import Project="..\.paket\Paket.Restore.targets" />
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Library.fs" />
+        <Compile Include="DockerHelper.fs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="paket.references" />
+        <Content Include="paket.template" />
+    </ItemGroup>
+    <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
