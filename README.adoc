@@ -7,6 +7,7 @@ A set of tools help you to write FAKE scripts.
 == Notes for owner
 
 . Update `src/paket.template`
+. Set `NUGET_KEY` environment variable
 . Push to myget
 . Update `./paket.paket.dependencies`
 . Paket install
