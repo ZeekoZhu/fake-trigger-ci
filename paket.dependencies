@@ -4,9 +4,9 @@ storage: none
 framework: netstandard20
 
 nuget FSharp.Core ~> 4.7
-nuget CommandLineParser.FSharp ~> 2.6
-nuget Fake.Core.Target ~> 5.18
-nuget Fake.Tools.Git ~> 5.18
+nuget CommandLineParser.FSharp ~> 2.7
+nuget Fake.Core.Target ~> 5.19
+nuget Fake.Tools.Git ~> 5.19
 // [ FAKE GROUP ]
 group Build
     storage: none
