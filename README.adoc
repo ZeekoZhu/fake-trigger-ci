@@ -9,7 +9,7 @@ A set of tools help you to write FAKE scripts.
 . Update `src/paket.template`
 . Set `NUGET_KEY` environment variable
 . Push to myget
-. Update `./paket.paket.dependencies`
+. Update `./paket.dependencies`
 . Paket install
 . Stage all changed files
 

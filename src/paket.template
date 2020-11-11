@@ -1,7 +1,7 @@
 type project
 id MyFakeTools
-version 0.0.16
+version 0.0.17
 authors Zeeko
 licenseUrl http://opensource.org/licenses/MIT
 dependencies
-    framework: netstandard20
+    framework: net5.0

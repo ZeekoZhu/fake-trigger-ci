@@ -82,7 +82,7 @@ module TriggerCI =
             if options.IsProd then options.Version
             else options.Version + "-" + timestamp + "." + Git.Information.getCurrentHash ()
             |> SemVer.parse
-        
+
         let latestTag =
             getLatestTag ()
             |> Option.map SemVer.parse
